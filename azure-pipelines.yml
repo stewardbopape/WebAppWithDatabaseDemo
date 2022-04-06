@@ -17,7 +17,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - task: CopyFiles@2
   inputs:
-    Contents: '_buildOutput/**'
+    Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
     CleanTargetFolder: true
 - task: PublishBuildArtifacts@1
